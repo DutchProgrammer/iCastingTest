@@ -1,5 +1,5 @@
 var routeFiles = {"/home":{"controller":"HomeController","templateUrl":"modules/home/home.html"}};
-/** Created at Sat Nov 29 2014 01:27:57 GMT+0100 (CET) **//**
+/** Created at Sat Nov 29 2014 10:53:47 GMT+0100 (CET) **//**
  * @license AngularJS v1.3.4
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
