@@ -28,3 +28,9 @@ Start API Server
 To start the API server execute the following in your console
 ```sh
 node serverSideApi.js
+```
+
+How to see the test in your browser
+----
+To See the test go to the following URL:
+http://localhost:9001
