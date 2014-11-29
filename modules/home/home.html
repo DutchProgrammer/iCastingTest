@@ -1,0 +1,120 @@
+<div content-for="title">AngularTest</div>
+
+
+
+	<div class="blockFields">
+
+		<form name="accountBlock" ng-submit="submit(accountBlock, 'account')" >
+			<div class="row block blockAccount" ng-class="accountBlock.formStatus">
+
+			  <div class="col-md-8">
+
+					<div class="form-group">
+					  <label for="email">Email address</label>
+					  <input type="email" class="form-control" id="email" ng-model="user.account.email" ng-model-options="modelOptions" placeholder="Enter email" required>
+					</div>
+					<div class="form-group">
+					  <label for="password">Password</label>
+					  <input type="password" class="form-control" id="password" ng-model="user.account.password" ng-model-options="modelOptions" placeholder="Password" required>
+					</div>
+
+					<button type="submit" class="submitButton btn btn-default" ng-disabled="step != 1" ng-class="accountBlock.formButtonStatus">
+						<i class="submitInfoButton fa" ng-class="accountBlock.formStatusInfo"></i>
+
+						Save
+					</button>
+			  </div>
+			  <div class="col-md-4">
+			  	<h3>Block Account</h3>
+			  	<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed sollicitudin ex, at gravida magna. Donec dapibus ut tortor vel vehicula. Nullam eu libero imperdiet, pharetra purus eget, commodo neque. Sed sagittis est purus, et tempus libero tempor nec. Nunc viverra feugiat arcu suscipit varius.
+					</p>
+			  </div>
+
+			</div>
+
+		</form>
+
+		<form name="blockName" ng-submit="submit(blockName, 'name')" >
+			<div class="row block blockName" ng-class="blockName.formStatus">
+
+			  <div class="col-md-8">
+
+					<div class="form-group">
+					  <label for="firstname">First name</label>
+					  <input type="text" class="form-control" id="firstname" ng-model="user.name.first" ng-model-options="modelOptions" placeholder="Enter firstname" required>
+					</div>
+
+					<div class="form-group">
+					  <label for="middlename">Middle name</label>
+					  <input type="text" class="form-control" id="middlename" ng-model="user.name.middle" ng-model-options="modelOptions" placeholder="Enter middle name">
+					</div>
+
+					<div class="form-group">
+					  <label for="lastname">Last name</label>
+					  <input type="text" class="form-control" id="lastname" ng-model="user.name.last" ng-model-options="modelOptions" placeholder="Enter last name" required>
+					</div>
+
+
+					<button type="submit" class="btn btn-default" ng-disabled="step != 2" ng-class="blockName.formButtonStatus">
+						<i class="submitInfoButton fa" ng-class="blockName.formStatusInfo"></i>
+						Save
+					</button>
+			  </div>
+			  <div class="col-md-4">
+			  	<h3>Block Name</h3>
+
+			  	<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed sollicitudin ex, at gravida magna. Donec dapibus ut tortor vel vehicula. Nullam eu libero imperdiet, pharetra purus eget, commodo neque. Sed sagittis est purus, et tempus libero tempor nec. Nunc viverra feugiat arcu suscipit varius.
+					</p>
+			  </div>
+			</div>
+		</form>
+
+		<form name="blockProperties" ng-submit="submit(blockProperties, 'properties')" >
+			<div class="row block blockProperties" ng-class="blockProperties.formStatus">
+			  <div class="col-md-8">
+
+					<div class="form-group">
+					  <label for="age">Age</label>
+					  <input type="number" class="form-control" id="age" ng-model="user.properties.age" ng-model-options="modelOptions" ng-minlength="1" ng-maxlength="100" required>
+					</div>
+
+					<div class="form-group">
+					  <label>Gender</label>
+					  <div ng-repeat="gender in genders">
+					  	<label class="subLabel">
+					  		<input type="radio" name="gender" ng-value="gender" ng-click="saveGender($event)" />
+					  		{{gender}}
+					  	</label>
+					  </div>
+					</div>
+
+					<div class="form-group">
+					  <label>Interests</label>
+					  <div ng-repeat="interest in interests">
+					  	<label class="subLabel">
+							  <input type="checkbox" name="user.propperties.interest.{{interest}}" ng-value="interest" ng-click="saveInterest($event)" />
+							  {{interest}}
+					  	</label>
+						</div>
+
+						<button type="submit" class="btn btn-default" ng-disabled="step != 3" ng-class="blockProperties.formButtonStatus">
+							<i class="submitInfoButton fa" ng-class="blockProperties.formStatusInfo"></i>
+							Save
+						</button>
+					</div>
+
+			  </div>
+			  <div class="col-md-4">
+			  	<h3>Block Properties</h3>
+
+			  	<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed sollicitudin ex, at gravida magna. Donec dapibus ut tortor vel vehicula. Nullam eu libero imperdiet, pharetra purus eget, commodo neque. Sed sagittis est purus, et tempus libero tempor nec. Nunc viverra feugiat arcu suscipit varius.
+					</p>
+			  </div>
+			</div>
+		</form>
+
+	</div>
+</form>

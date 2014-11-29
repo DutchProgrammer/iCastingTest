@@ -1,0 +1,27 @@
+.page-home h3 {
+	margin-top:0;
+}
+.page-home .subLabel {
+	font-weight: normal;
+}
+
+.page-home .block {
+  margin-bottom: 30px;
+  padding: 10px;
+	border: 2px solid #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.page-home .block .col-md-8 {
+  border-right: 1px solid #ccc;
+}
+
+.page-home .block.waiting {
+	border: 2px solid #5bc0de;
+}
+.page-home .block.success {
+	border: 2px solid #5cb85c;
+}
+.page-home .block.error {
+	border: 2px solid #d9534f;
+}
