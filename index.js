@@ -11,6 +11,12 @@ server.listen(config.serverPort, function () {
 });
 
 app.get('*', function (req, res) {
+
+	//If home
+	if (req.url === '/home') {
+		req.url = '/';
+	}
+	
 	var url = (req.url === '/' ? '/index.html' : req.url);
 	    url = url.split('?')[0];
 

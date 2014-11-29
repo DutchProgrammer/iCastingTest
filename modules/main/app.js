@@ -4,7 +4,7 @@ var app = angular.module('angularTest', [
   //"ngMockE2E"
 ]);
 
-app.config(['$routeProvider', function ($routeProvider) {
+app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 
   angular.forEach(routeFiles, function(route, routeUrl) {
     $routeProvider.when(routeUrl, route);
@@ -14,7 +14,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 
   // use the HTML5 History API (FOR google friendly URL)
   //http://scotch.io/quick-tips/js/angular/pretty-urls-in-angularjs-removing-the-hashtag
-  //$locationProvider.html5Mode(true);
+  $locationProvider.html5Mode(true);
 }]);
 
 app.config(['$httpProvider', function ($httpProvider) {

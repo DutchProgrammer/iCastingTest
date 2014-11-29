@@ -1,5 +1,5 @@
 var routeFiles = {"/home":{"controller":"HomeController","templateUrl":"modules/home/home.html"}};
-/** Created at Sat Nov 29 2014 01:07:58 GMT+0100 (CET) **//**
+/** Created at Sat Nov 29 2014 01:27:57 GMT+0100 (CET) **//**
  * @license AngularJS v1.3.4
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
@@ -41190,7 +41190,7 @@ var app = angular.module('angularTest', [
   //"ngMockE2E"
 ]);
 
-app.config(['$routeProvider', function ($routeProvider) {
+app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 
   angular.forEach(routeFiles, function(route, routeUrl) {
     $routeProvider.when(routeUrl, route);
@@ -41200,7 +41200,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 
   // use the HTML5 History API (FOR google friendly URL)
   //http://scotch.io/quick-tips/js/angular/pretty-urls-in-angularjs-removing-the-hashtag
-  //$locationProvider.html5Mode(true);
+  $locationProvider.html5Mode(true);
 }]);
 
 app.config(['$httpProvider', function ($httpProvider) {
@@ -41344,6 +41344,10 @@ angular.module('angularTest').controller('HomeController', ['$rootScope', '$scop
 
 				$scope.step++;
 
+				if ($scope.step >= $scope.maxSteps) {
+					$scope.step = 1;
+				}
+
 				//Apply Change
 				$scope.$apply();
 			}, 2500);
@@ -41362,8 +41366,6 @@ angular.module('angularTest').controller('HomeController', ['$rootScope', '$scop
 				form.formStatus       = '';
 				form.formButtonStatus = 'btn-default';
 				form.formStatusInfo   = '';
-
-				$scope.step++;
 
 				//Apply Change
 				$scope.$apply();

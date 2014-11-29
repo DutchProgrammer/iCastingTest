@@ -46,7 +46,6 @@ app.get('/api/getuser', function (req, res) {
 
 app.post('/api/saveuser', function (req, res) {
 
-	console.info(arguments, 'req saveUser');
 	var response = JSON.stringify({'status' : 'ok', 'message' : 'ok'});	
 
 	res.writeHead(200, {'content-type' : 'application/json'});

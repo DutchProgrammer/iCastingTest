@@ -3,6 +3,7 @@
 }
 .page-home .subLabel {
 	font-weight: normal;
+  text-transform: capitalize;
 }
 
 .page-home .block {

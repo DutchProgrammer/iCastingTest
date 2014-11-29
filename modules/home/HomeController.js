@@ -85,6 +85,10 @@ angular.module('angularTest').controller('HomeController', ['$rootScope', '$scop
 
 				$scope.step++;
 
+				if ($scope.step >= $scope.maxSteps) {
+					$scope.step = 1;
+				}
+
 				//Apply Change
 				$scope.$apply();
 			}, 2500);
@@ -103,8 +107,6 @@ angular.module('angularTest').controller('HomeController', ['$rootScope', '$scop
 				form.formStatus       = '';
 				form.formButtonStatus = 'btn-default';
 				form.formStatusInfo   = '';
-
-				$scope.step++;
 
 				//Apply Change
 				$scope.$apply();
